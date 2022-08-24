@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EDBE3D3A-7833-4583-8A7A-53A3B0C64231}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Battleship1</RootNamespace>
+    <AssemblyName>Battleship1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SuperSimpleTcp, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SuperSimpleTcp.3.0.0\lib\net461\SuperSimpleTcp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AynıyereatışHatası.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AynıyereatışHatası.Designer.cs">
+      <DependentUpon>AynıyereatışHatası.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YerleştirmeHatası.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YerleştirmeHatası.Designer.cs">
+      <DependentUpon>YerleştirmeHatası.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Oyuncular.cs" />
+    <Compile Include="Çalıştırma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Çalıştırma.Designer.cs">
+      <DependentUpon>Çalıştırma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShipPlacement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShipPlacement.Designer.cs">
+      <DependentUpon>ShipPlacement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gemiler.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start.Designer.cs">
+      <DependentUpon>Start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YouLose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YouLose.Designer.cs">
+      <DependentUpon>YouLose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Youwin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Youwin.Designer.cs">
+      <DependentUpon>Youwin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AynıyereatışHatası.resx">
+      <DependentUpon>AynıyereatışHatası.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ShipPlacement.resx">
+      <DependentUpon>ShipPlacement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start.resx">
+      <DependentUpon>Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YerleştirmeHatası.resx">
+      <DependentUpon>YerleştirmeHatası.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YouLose.resx">
+      <DependentUpon>YouLose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Youwin.resx">
+      <DependentUpon>Youwin.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\youlose.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\youwin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\battleship wallpaper.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
